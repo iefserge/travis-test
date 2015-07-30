@@ -1,0 +1,8 @@
+language: cpp
+compiler: gcc
+node_js: "0.10"
+
+before_script:
+  - node -e "console.log('test')"
+
+script: "npm test"
