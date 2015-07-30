@@ -1,8 +1,15 @@
 language: cpp
 compiler: gcc
 node_js: "0.10"
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - qemu
 
 before_script:
   - node -e "console.log('test')"
+  - qemu-system-x86_64 -version
 
 script: "npm test"
