@@ -12,4 +12,4 @@ before_script:
   - node -v
   - qemu-system-x86_64 -version
 
-script: "npm install runtimejs runtimeify && npm test"
+script: "npm install runtimejs runtimeify && npm test && ./node_modules/runtimeify/runtimeify.js index.js -o /home/travis/.runtime/initrd && qemu-system-x86_64 -m 512 -kernel /home/travis/.runtime/runtime-0.1.14 -initrd /home/travis/.runtime/initrd -nographic -no-kvm -netdev user,id=hostnet0 -device virtio-net-pci,romfile=,netdev=hostnet0 -nodefaults -serial file:/home/travis/.runtime/log & tail --retry --follow=name /home/travis/.runtime/log"
