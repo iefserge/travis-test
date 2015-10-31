@@ -12,4 +12,4 @@ before_script:
   - node -v
   - qemu-system-x86_64 -version
 
-script: "npm test"
+script: "npm install runtimejs runtimeify && npm test"
