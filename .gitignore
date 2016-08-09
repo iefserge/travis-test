@@ -1,3 +1,2 @@
 /initrd
-/node_modules/*
-!runtime-tools/
+/node_modules

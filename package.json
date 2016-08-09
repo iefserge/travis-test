@@ -2,6 +2,10 @@
   "name": "",
   "version": "1.0.0",
   "scripts": {
-    "test": "runtimeify index.js -o initrd && ./node_modules/runtime-tools/bin/runtime-qemu.js --nographic --verbose ./initrd"
+    "start": "runtime start"
+  },
+  "dependencies": {
+    "runtime-cli": "^3.0.2",
+    "runtimejs": "^0.2.14"
   }
 }
