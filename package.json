@@ -2,7 +2,7 @@
   "name": "",
   "version": "1.0.0",
   "scripts": {
-    "start": "runtime start --kernel kernel --append-qemu='-no-kvm'"
+    "start": "runtime start --kernel kernel --append-qemu='-no-kvm' --verbose"
   },
   "dependencies": {
     "runtime-cli": "^3.0.2",
