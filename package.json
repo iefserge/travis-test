@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "runtime start --kernel kernel --append-qemu='-no-kvm' --verbose",
-    "start2": "runtime pack . && qemu-system-x86_64 -machine pc,accel=tcg -m 512 -smp 1 -s -kernel kernel -initrd .initrd -device virtio-net-pci,romfile=,netdev=hostnet0,mac=1a:46:0b:ca:bc:7c -netdev user,net=192.168.76.0/24,dhcpstart=192.168.76.9,hostfwd=udp::9000-:9000,hostfwd=tcp::9000-:9000,id=hostnet0 -no-kvm -nographic"
+    "start2": "runtime pack . && strace qemu-system-x86_64 -machine pc,accel=tcg -m 512 -smp 1 -s -kernel kernel -initrd .initrd -device virtio-net-pci,romfile=,netdev=hostnet0,mac=1a:46:0b:ca:bc:7c -netdev user,net=192.168.76.0/24,dhcpstart=192.168.76.9,hostfwd=udp::9000-:9000,hostfwd=tcp::9000-:9000,id=hostnet0 -no-kvm -nographic"
   },
   "dependencies": {
     "runtime-cli": "^3.0.2",
