@@ -2,7 +2,7 @@
   "name": "",
   "version": "1.0.0",
   "scripts": {
-    "start": "runtime start"
+    "start": "runtime start --kernel kernel"
   },
   "dependencies": {
     "runtime-cli": "^3.0.2",

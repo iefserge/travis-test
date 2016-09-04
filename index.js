@@ -1,3 +1,3 @@
 console.log('hello world');
-
-console.log(runtime.machine.shutdown());
+__SYSCALL.onexit = __SYSCALL.poweroff;
+__SYSCALL.exit();
